@@ -17,11 +17,14 @@ mkdir $PROJECT
 (
     cd $PROJECT
 
+    # Not needed.
+    rm setup.sh
+
+    # Needed .secret.
+    touch .secret
+
     # Replace __NAME__ with given arg.
     sed -i s/__NAME__/$1/g package.json
-
-    # Create empty .secret.
-    touch .secret
 
     # Initialize node modules.
     npm install
