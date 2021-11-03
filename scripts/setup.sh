@@ -7,11 +7,26 @@ fi
 
 PROJECT=$1
 
+# Create project directory.
 mkdir $PROJECT
+
+# Populate it.
 (cd ContractTemplate && git archive --format=tar HEAD) | tar x -C $PROJECT
 
-# Replace __NAME__ with given arg.
-sed -i s/__NAME__/$1/g $PROJECT/package.json
+# Setup project.
+(
+    cd $PROJECT
 
-# Create empty .secret.
-touch $PROJECT/.secret
+    # Replace __NAME__ with given arg.
+    sed -i s/__NAME__/$1/g package.json
+
+    # Create empty .secret.
+    touch .secret
+
+    # Initialize git.
+    git init
+    git commit -m initial
+
+    # Initialize node modules.
+    npm install
+)
