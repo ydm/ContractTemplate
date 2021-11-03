@@ -21,6 +21,7 @@
     },
     "homepage": "https://github.com/ydm/__NAME__#readme",
     "devDependencies": {
+        "@truffle/hdwallet-provider": "^1.5.1",
         "solhint": "^3.3.6",
         "solhint-plugin-prettier": "^0.0.5",
         "truffle": "^5.4.17"

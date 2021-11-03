@@ -18,9 +18,9 @@
  *
  */
 
-import { fs } from "fs";
-import { HDWalletProvider } from "@truffle/hdwallet-provider";
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
+const fs = require("fs");
+const HDWalletProvider = require("@truffle/hdwallet-provider");
+const mnemonic = fs.readFileSync(".secret").toString().trim();
 
 const mnemonic = fs.readFileSync(".secret").toString().trim();
 
