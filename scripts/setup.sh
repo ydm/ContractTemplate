@@ -23,11 +23,11 @@ mkdir $PROJECT
     # Create empty .secret.
     touch .secret
 
+    # Initialize node modules.
+    npm install
+
     # Initialize git.
     git init
     git add .
     git commit -m initial
-
-    # Initialize node modules.
-    npm install
 )
