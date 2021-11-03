@@ -25,6 +25,7 @@ mkdir $PROJECT
 
     # Initialize git.
     git init
+    git add .
     git commit -m initial
 
     # Initialize node modules.
