@@ -5,9 +5,13 @@ if [ -z "$1" ] ; then
     exit 1
 fi
 
+PROJECT=$1
+
+mkdir $PROJECT
+(cd ContractTemplate && git archive --format=tar HEAD) | tar x -C $PROJECT
+
 # Replace __NAME__ with given arg.
-sed -i s/__NAME__/$1/g ContractTemplate/package.json
+sed -i s/__NAME__/$1/g $PROJECT/package.json
 
-touch ContractTemplate/.secret
-
-mv ContractTemplate "$1"
+# Create empty .secret.
+touch $PROJECT/.secret
