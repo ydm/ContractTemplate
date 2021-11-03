@@ -1,0 +1,28 @@
+{
+    "name": "__NAME__",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "compile": "npx truffle compile && npm run solhint",
+        "console": "npx truffle console",
+        "migrate": "npx truffle migrate",
+        "solhint": "npx solhint 'contracts/**/*.sol'",
+        "test": "npx truffle test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ydm/__NAME__.git"
+    },
+    "keywords": [],
+    "author": "Yordan Miladinov <jordanMiladinov@gmail.com>",
+    "license": "GPL-3.0-or-later",
+    "bugs": {
+        "url": "https://github.com/ydm/__NAME__/issues"
+    },
+    "homepage": "https://github.com/ydm/__NAME__#readme",
+    "devDependencies": {
+        "solhint": "^3.3.6",
+        "solhint-plugin-prettier": "^0.0.5",
+        "truffle": "^5.4.17"
+    }
+}
